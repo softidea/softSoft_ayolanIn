@@ -54,8 +54,8 @@ public class user_login extends javax.swing.JFrame {
         getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 380, 150, -1));
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 330, 150, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\THINK IT\\Downloads\\Logo500x500_transpernt.png")); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 560, 450));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo500x500_transpernt.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 560, 450));
 
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -65,7 +65,7 @@ public class user_login extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 430, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\THINK IT\\Downloads\\back.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, 10, 1400, -1));
 
         pack();
