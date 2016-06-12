@@ -5,9 +5,6 @@
  */
 package account;
 
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author deepalsuranga

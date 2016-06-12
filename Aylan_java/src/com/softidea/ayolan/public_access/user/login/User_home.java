@@ -5,9 +5,12 @@
  */
 package com.softidea.ayolan.public_access.user.login;
 
+import com.softidea.ayolan.public_access.payment.customer;
+import com.softidea.ayolan.public_access.payment.payment;
+import com.softidea.ayolan.public_access.payment.reports;
+import com.softidea.ayolan.public_access.payment.service;
 import java.awt.Color;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
+import javax.swing.JLabel;
 
 /**
  *
@@ -15,19 +18,28 @@ import javax.swing.event.ListSelectionListener;
  */
 public class User_home extends javax.swing.JFrame {
 
+    public static String username;
+
     /**
      * Creates new form User_home
      */
     public User_home() {
         initComponents();
-        this.getContentPane().setBackground(new Color(61, 61, 61));
 
+        this.getContentPane().setBackground(Color.decode("#00BFA5"));
+
+        //setTextToImage("src/com/softidea/www/public_access/images/top_1029dd5.jpg", jLabel1, "Payment", 35, 110);
+        //setTextToImage("src/com/softidea/www/public_access/images/top_1029dd5.jpg", jLabel2, "Customer", 10, 10);
+        setLabelBoaderAndBackground(lb_customer, "#FF0000");
+        setLabelBoaderAndBackground(lb_reports, "#039BE5");
+        setLabelBoaderAndBackground(lb_customer, "#FF0000");
         jScrollPane1.setVisible(false);
 
     }
 
-    public void my(String string) {
+    public void load_username(String string) {
         lb_username.setText(string);
+        string=User_home.username;
     }
 
     /**
@@ -39,16 +51,101 @@ public class User_home extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        lb_username = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         li_menu = new javax.swing.JList<>();
+        lb_customer = new javax.swing.JLabel();
+        lb_add_customer1 = new javax.swing.JLabel();
+        lb_add_payment = new javax.swing.JLabel();
+        lb_add_service2 = new javax.swing.JLabel();
+        lb_report_dally = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        lb_username = new javax.swing.JLabel();
+        lb_payment1 = new javax.swing.JLabel();
+        lb_update_customer = new javax.swing.JLabel();
+        lb_add_customer = new javax.swing.JLabel();
+        lb_active_customer = new javax.swing.JLabel();
+        lb_report_dally1 = new javax.swing.JLabel();
+        lb_services = new javax.swing.JLabel();
+        lb_update_service = new javax.swing.JLabel();
+        lb_add_service = new javax.swing.JLabel();
+        lb_report2 = new javax.swing.JLabel();
+        lb_report_dally2 = new javax.swing.JLabel();
+        lb_reports = new javax.swing.JLabel();
+        lb_customer3 = new javax.swing.JLabel();
+        lb_customer_add3 = new javax.swing.JLabel();
+        lb_report3 = new javax.swing.JLabel();
+        lb_report_dally3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1366, 768));
         setMinimumSize(new java.awt.Dimension(1366, 768));
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        li_menu.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        li_menu.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "User Settings", "My Account", "Go drashboard", "Logout" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        li_menu.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        li_menu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        li_menu.setVisibleRowCount(4);
+        li_menu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                li_menuMouseClicked(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                li_menuMouseReleased(evt);
+            }
+        });
+        jScrollPane1.setViewportView(li_menu);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 50, 140, 90));
+
+        lb_customer.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lb_customer.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_customer.setText("Customer");
+        lb_customer.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_customer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        lb_customer.setOpaque(true);
+        lb_customer.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb_customerMouseClicked(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                lb_customerMouseReleased(evt);
+            }
+        });
+        getContentPane().add(lb_customer, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 280, 290));
+
+        lb_add_customer1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_add_customer1.setText("Update Payment");
+        lb_add_customer1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_add_customer1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        getContentPane().add(lb_add_customer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 150, 140));
+
+        lb_add_payment.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_add_payment.setText("Add Payment");
+        lb_add_payment.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_add_payment.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        getContentPane().add(lb_add_payment, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 150, 140));
+
+        lb_add_service2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_add_service2.setText("Today Payment");
+        lb_add_service2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_add_service2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        getContentPane().add(lb_add_service2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 150, 140));
+
+        lb_report_dally.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_report_dally.setText("Monthly Payment");
+        lb_report_dally.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_report_dally.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        getContentPane().add(lb_report_dally, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 150, 140));
+
+        jPanel2.setBackground(new java.awt.Color(0, 102, 102));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 730, 1370, 40));
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -62,24 +159,120 @@ public class User_home extends javax.swing.JFrame {
                 lb_usernameMouseClicked(evt);
             }
         });
-        jPanel1.add(lb_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(1097, 11, 259, 40));
+        jPanel1.add(lb_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 10, 290, 40));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 50));
 
-        li_menu.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        li_menu.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "User Settings", "My Account", "Go drashboard", "Logout" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        li_menu.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                li_menuMouseClicked(evt);
+        lb_payment1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lb_payment1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_payment1.setText("Payment");
+        lb_payment1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_payment1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        lb_payment1.setOpaque(true);
+        lb_payment1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                lb_payment1MouseReleased(evt);
             }
         });
-        jScrollPane1.setViewportView(li_menu);
+        getContentPane().add(lb_payment1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 280, 290));
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 50, 180, 90));
+        lb_update_customer.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_update_customer.setText("Update Customer");
+        lb_update_customer.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_update_customer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        getContentPane().add(lb_update_customer, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 390, 150, 140));
+
+        lb_add_customer.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_add_customer.setText("Add Customer");
+        lb_add_customer.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_add_customer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        getContentPane().add(lb_add_customer, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 390, 150, 140));
+
+        lb_active_customer.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_active_customer.setText("Active Customer");
+        lb_active_customer.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_active_customer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        getContentPane().add(lb_active_customer, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 540, 150, 140));
+
+        lb_report_dally1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_report_dally1.setText("Pendding  Closed");
+        lb_report_dally1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_report_dally1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        getContentPane().add(lb_report_dally1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 540, 150, 140));
+
+        lb_services.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lb_services.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_services.setText("Services");
+        lb_services.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_services.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        lb_services.setOpaque(true);
+        lb_services.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                lb_servicesMouseReleased(evt);
+            }
+        });
+        getContentPane().add(lb_services, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, 280, 290));
+
+        lb_update_service.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_update_service.setText("Update Services");
+        lb_update_service.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_update_service.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        getContentPane().add(lb_update_service, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 90, 150, 140));
+
+        lb_add_service.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_add_service.setText("Add Services");
+        lb_add_service.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_add_service.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        getContentPane().add(lb_add_service, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 90, 150, 140));
+
+        lb_report2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_report2.setText("Report");
+        lb_report2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_report2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        getContentPane().add(lb_report2, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 240, 150, 140));
+
+        lb_report_dally2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_report_dally2.setText("Report Dally");
+        lb_report_dally2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_report_dally2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        getContentPane().add(lb_report_dally2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 240, 150, 140));
+
+        lb_reports.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lb_reports.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_reports.setText("Reports");
+        lb_reports.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_reports.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        lb_reports.setOpaque(true);
+        lb_reports.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                lb_reportsMouseReleased(evt);
+            }
+        });
+        getContentPane().add(lb_reports, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 390, 280, 290));
+
+        lb_customer3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_customer3.setText("By Customer");
+        lb_customer3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_customer3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        getContentPane().add(lb_customer3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 390, 150, 140));
+
+        lb_customer_add3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_customer_add3.setText("By Date");
+        lb_customer_add3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_customer_add3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        getContentPane().add(lb_customer_add3, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 390, 150, 140));
+
+        lb_report3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_report3.setText("Today Payble");
+        lb_report3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_report3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        getContentPane().add(lb_report3, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 540, 150, 140));
+
+        lb_report_dally3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lb_report_dally3.setText("Monthly Report");
+        lb_report_dally3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lb_report_dally3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        getContentPane().add(lb_report_dally3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 540, 150, 140));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -101,17 +294,68 @@ int i = 1;
 
     private void li_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_li_menuMouseClicked
 
-        li_menu.addListSelectionListener(new ListSelectionListener() {
-            @Override
-            public void valueChanged(ListSelectionEvent lse) {
-                System.out.println("index :" + li_menu.getSelectedIndex());
-            }
-        });
-
 //        this.dispose();
 //        new user_login().setVisible(true);
 
     }//GEN-LAST:event_li_menuMouseClicked
+
+    private void li_menuMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_li_menuMouseReleased
+
+        if (li_menu.getSelectedIndex() == 3) {
+            new user_login().setVisible(true);
+
+            this.dispose();
+
+        }
+
+    }//GEN-LAST:event_li_menuMouseReleased
+
+    private void lb_customerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_customerMouseClicked
+
+
+    }//GEN-LAST:event_lb_customerMouseClicked
+
+    private void lb_servicesMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_servicesMouseReleased
+
+        service service = new service();
+        service.load_username(lb_username.getText());
+        service.setVisible(true);
+
+        this.dispose();
+
+
+    }//GEN-LAST:event_lb_servicesMouseReleased
+
+    private void lb_customerMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_customerMouseReleased
+
+        customer customer = new customer();
+        customer.load_username(lb_username.getText());
+        customer.setVisible(true);
+
+        this.dispose();
+
+
+    }//GEN-LAST:event_lb_customerMouseReleased
+
+    private void lb_payment1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_payment1MouseReleased
+
+        payment payment = new payment();
+        payment.load_username(lb_username.getText());
+        payment.setVisible(true);
+
+        this.dispose();
+
+    }//GEN-LAST:event_lb_payment1MouseReleased
+
+    private void lb_reportsMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_reportsMouseReleased
+
+        reports reports = new reports();
+        reports.load_username(lb_username.getText());
+        reports.setVisible(true);
+
+        this.dispose();
+
+    }//GEN-LAST:event_lb_reportsMouseReleased
 
     /**
      * @param args the command line arguments
@@ -148,8 +392,63 @@ int i = 1;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lb_active_customer;
+    private javax.swing.JLabel lb_add_customer;
+    private javax.swing.JLabel lb_add_customer1;
+    private javax.swing.JLabel lb_add_payment;
+    private javax.swing.JLabel lb_add_service;
+    private javax.swing.JLabel lb_add_service2;
+    private javax.swing.JLabel lb_customer;
+    private javax.swing.JLabel lb_customer3;
+    private javax.swing.JLabel lb_customer_add3;
+    private javax.swing.JLabel lb_payment1;
+    private javax.swing.JLabel lb_report2;
+    private javax.swing.JLabel lb_report3;
+    private javax.swing.JLabel lb_report_dally;
+    private javax.swing.JLabel lb_report_dally1;
+    private javax.swing.JLabel lb_report_dally2;
+    private javax.swing.JLabel lb_report_dally3;
+    private javax.swing.JLabel lb_reports;
+    private javax.swing.JLabel lb_services;
+    private javax.swing.JLabel lb_update_customer;
+    private javax.swing.JLabel lb_update_service;
     public static javax.swing.JLabel lb_username;
     private javax.swing.JList<String> li_menu;
     // End of variables declaration//GEN-END:variables
+//
+//    final void setTextToImage(String doubleshlasPath, JLabel whatLabel, String name, int x, int y) {
+//
+//        try {
+//            File f = new File(doubleshlasPath);
+//            BufferedImage read = ImageIO.read(f);
+//            Graphics2D cr = read.createGraphics();
+//
+//            cr.setColor(Color.WHITE);
+//            cr.setFont(new Font("Tahoma", Font.PLAIN, 30));
+//
+//            int yP = (whatLabel.getY() + whatLabel.getHeight() + y);
+//            int xP = (whatLabel.getX() + whatLabel.getWidth() + x);
+//
+//            cr.drawString(name, xP, yP);
+//
+//            //cr.fillRect(0, 0, 200, 400);
+//            whatLabel.setIcon(new ImageIcon(read.getScaledInstance(whatLabel.getWidth(), whatLabel.getHeight(), Image.SCALE_SMOOTH)));
+//        } catch (IOException ex) {
+//            Logger.getLogger(User_home.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
+
+    final void setLabelBoaderAndBackground(JLabel label, String code) {
+        label.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        // label.setBackground(new Color(r, g, b));
+        label.setBackground(Color.decode(code));
+        label.setFont(new java.awt.Font("Tahoma", 0, 14));
+        label.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+
+        label.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+    }
+
 }

@@ -10,7 +10,6 @@ import com.softidea.www.public_access.DB.MC_JavaDataBaseConnection;
 import java.awt.Color;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -58,6 +57,7 @@ public final class user_login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         seperatorBar = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
@@ -184,7 +184,7 @@ public final class user_login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(_tf_user_loging_userName, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 280, 300, -1));
-        getContentPane().add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 424, 300, 6));
+        getContentPane().add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 410, 300, 10));
 
         logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/softidea/www/public_access/images/img_logo200x200.png"))); // NOI18N
@@ -225,6 +225,10 @@ public final class user_login extends javax.swing.JFrame {
         jLabel5.setText("Managment System");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 450, 290, 60));
 
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel7.setText("Test Version");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(654, 510, 120, -1));
+
         seperatorBar.setBackground(new java.awt.Color(255, 255, 255));
         seperatorBar.setForeground(new java.awt.Color(255, 255, 255));
         seperatorBar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/softidea/www/public_access/images/img_SaperateBar.png"))); // NOI18N
@@ -237,11 +241,17 @@ public final class user_login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new Thread(() -> {
+        try {
+            new Thread(() -> {
+                jProgressBar1.setIndeterminate(true);
+            }).start();
+            new Thread(() -> {
 
-            login_user_method();
+                login_user_method();
 
-        }).start();
+            }).start();
+        } catch (Exception e) {
+        }
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -319,6 +329,7 @@ public final class user_login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -345,9 +356,13 @@ public final class user_login extends javax.swing.JFrame {
                     System.out.println("User Logged!");
                     User_home user_menu = new User_home();
                     user_menu.setVisible(true);
-                    user_menu.my(_tf_user_loging_userName.getText().trim());
+                    user_menu.load_username(_tf_user_loging_userName.getText().trim());
+
                     this.dispose();
                 } else {
+
+                    jProgressBar1.setIndeterminate(false);
+
                     JOptionPane.showMessageDialog(this, "Your are not Active user");
                     _pf_user_login_password.setBackground(Color.RED);
                     _tf_user_loging_userName.setBackground(Color.RED);
@@ -356,12 +371,16 @@ public final class user_login extends javax.swing.JFrame {
                 System.gc();
 
             } else {
+
+                jProgressBar1.setIndeterminate(false);
+
                 JOptionPane.showMessageDialog(this, "Please chack your email or Password!");
                 _tf_user_loging_userName.grabFocus();
             }
 
             rs.close();
         } catch (SQLException | NumberFormatException | HeadlessException e) {
+            e.printStackTrace();
         }
 
     }
