@@ -5,6 +5,8 @@
  */
 package com.softidea.ayolan.public_access.user.login;
 
+import javax.swing.GroupLayout;
+
 /**
  *
  * @author THINK IT
@@ -31,8 +33,11 @@ public class User_main extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         footer = new javax.swing.JPanel();
         hedder = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(1366, 772));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         main.setBackground(new java.awt.Color(0, 77, 64));
@@ -42,6 +47,11 @@ public class User_main extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Customer Registration");
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout mainLayout = new javax.swing.GroupLayout(main);
         main.setLayout(mainLayout);
@@ -50,7 +60,7 @@ public class User_main extends javax.swing.JFrame {
             .addGroup(mainLayout.createSequentialGroup()
                 .addGap(157, 157, 157)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1037, Short.MAX_VALUE))
+                .addContainerGap(1041, Short.MAX_VALUE))
         );
         mainLayout.setVerticalGroup(
             mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -60,7 +70,7 @@ public class User_main extends javax.swing.JFrame {
                 .addContainerGap(345, Short.MAX_VALUE))
         );
 
-        getContentPane().add(main, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, 630));
+        getContentPane().add(main, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1370, 630));
 
         footer.setBackground(new java.awt.Color(0, 77, 64));
 
@@ -72,28 +82,65 @@ public class User_main extends javax.swing.JFrame {
         );
         footerLayout.setVerticalGroup(
             footerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 72, Short.MAX_VALUE)
+            .addGap(0, 70, Short.MAX_VALUE)
         );
 
-        getContentPane().add(footer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 700, 1370, -1));
+        getContentPane().add(footer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 700, 1370, 70));
 
         hedder.setBackground(new java.awt.Color(0, 77, 64));
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout hedderLayout = new javax.swing.GroupLayout(hedder);
         hedder.setLayout(hedderLayout);
         hedderLayout.setHorizontalGroup(
             hedderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1370, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hedderLayout.createSequentialGroup()
+                .addContainerGap(1219, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(78, 78, 78))
         );
         hedderLayout.setVerticalGroup(
             hedderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hedderLayout.createSequentialGroup()
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(22, 22, 22))
         );
 
         getContentPane().add(hedder, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 70));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+
+           customer_registration cus_registration=new customer_registration();
+
+      main.removeAll();
+        GroupLayout layout = new GroupLayout(main);
+        main.setLayout(layout);
+
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(cus_registration, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+        layout.setVerticalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(cus_registration, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+       
+
+        System.gc();
+        
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        System.exit(0);
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,7 +180,8 @@ public class User_main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel footer;
     private javax.swing.JPanel hedder;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel main;
+    public static javax.swing.JPanel main;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,6 +5,11 @@
  */
 package com.softidea.ayolan.public_access.user.login;
 
+import static com.softidea.ayolan.public_access.user.login.User_main.main;
+import java.text.SimpleDateFormat;
+import javax.swing.GroupLayout;
+import javax.swing.JTextField;
+
 /**
  *
  * @author dinet
@@ -14,8 +19,16 @@ public class customer_registration extends javax.swing.JPanel {
     /**
      * Creates new form customer_registration
      */
-    public customer_registration() {
+    //customer
+    public static String cus_salutation,cus_fullName,cus_fullNameWithInitials,cus_address,cus_phoneNumber,cus_dob,cus_nic,cus_maritialStatus,cus_anyDependency,cus_position,cus_salary,cus_employerName,cus_employerAddress;
+    //gerenter
+     public static String guren_salutation,guren_fullName,guren_fullNameWithInitials,guren_address,guren_phoneNumber,guren_dob,guren_nic,guren_maritialStatus,guren_anyDependency,guren_position,guren_salary,guren_employerName,guren_employerAddress;
+  
+      SimpleDateFormat sdf=new SimpleDateFormat("dd-MM-yyyy");
+     
+     public customer_registration() {
         initComponents();
+        jr_pg1.setEnabled(false);
     }
 
     /**
@@ -33,69 +46,73 @@ public class customer_registration extends javax.swing.JPanel {
         gerenter_maride_state = new javax.swing.ButtonGroup();
         customer_dependencys = new javax.swing.ButtonGroup();
         gerenter_dependencys = new javax.swing.ButtonGroup();
+        page_change = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        jr_cus_mr = new javax.swing.JRadioButton();
+        jr_cus_mrs = new javax.swing.JRadioButton();
+        jr_cus_miss = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        tf_cus_full_name = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        tf_cus_fuul_name_initials = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        ta_cus_address = new javax.swing.JTextArea();
         jLabel5 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        tf_cus_phone_number = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        dc_guren_dob = new com.toedter.calendar.JDateChooser();
         jLabel7 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
+        tf_guren_nic = new javax.swing.JTextField();
+        jr_cus_maride = new javax.swing.JRadioButton();
+        jr_cus_single = new javax.swing.JRadioButton();
         jLabel8 = new javax.swing.JLabel();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
+        jr_cus_dependency_yes = new javax.swing.JRadioButton();
+        jr_cus_dependency_no = new javax.swing.JRadioButton();
         jLabel9 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        tf_cus_position = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        tf_cus_salery = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        tf_cus_employer_address = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        tf_cus_employer_name = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
+        jr_guren_mr = new javax.swing.JRadioButton();
+        jr_guren_mrs = new javax.swing.JRadioButton();
+        jr_guren_miss = new javax.swing.JRadioButton();
         jLabel14 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        tf_guren_full_name = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
+        tf_guren_fuul_name_initials = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        ta_guren_address = new javax.swing.JTextArea();
         jLabel17 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
+        tf_guren_phone_number = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
+        dc_cus_dob = new com.toedter.calendar.JDateChooser();
         jLabel19 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
-        jRadioButton11 = new javax.swing.JRadioButton();
-        jRadioButton12 = new javax.swing.JRadioButton();
+        tf_cus_nic = new javax.swing.JTextField();
+        jr_guren_maride = new javax.swing.JRadioButton();
+        jr_guren_single = new javax.swing.JRadioButton();
         jLabel20 = new javax.swing.JLabel();
-        jRadioButton13 = new javax.swing.JRadioButton();
-        jRadioButton14 = new javax.swing.JRadioButton();
+        jr_guren_dependency_yes = new javax.swing.JRadioButton();
+        jr_guren_dependency_no = new javax.swing.JRadioButton();
         jLabel21 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
+        tf_guren_position = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
+        tf_guren_salery = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
-        jTextField15 = new javax.swing.JTextField();
+        tf_guren_employer_address = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
-        jTextField16 = new javax.swing.JTextField();
+        tf_guren_employer_name = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
+        jr_pg3 = new javax.swing.JRadioButton();
+        jr_pg2 = new javax.swing.JRadioButton();
+        jr_pg1 = new javax.swing.JRadioButton();
 
         setBackground(new java.awt.Color(0, 77, 64));
 
@@ -103,116 +120,159 @@ public class customer_registration extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("01.Customer Personal Details");
 
-        customer_salutation.add(jRadioButton1);
-        jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setText("Mr");
-        jRadioButton1.setContentAreaFilled(false);
+        customer_salutation.add(jr_cus_mr);
+        jr_cus_mr.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jr_cus_mr.setForeground(new java.awt.Color(255, 255, 255));
+        jr_cus_mr.setSelected(true);
+        jr_cus_mr.setText("Mr");
+        jr_cus_mr.setContentAreaFilled(false);
+        jr_cus_mr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jr_cus_mrActionPerformed(evt);
+            }
+        });
 
-        customer_salutation.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setText("Mrs");
-        jRadioButton2.setContentAreaFilled(false);
+        customer_salutation.add(jr_cus_mrs);
+        jr_cus_mrs.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jr_cus_mrs.setForeground(new java.awt.Color(255, 255, 255));
+        jr_cus_mrs.setText("Mrs");
+        jr_cus_mrs.setContentAreaFilled(false);
+        jr_cus_mrs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jr_cus_mrsActionPerformed(evt);
+            }
+        });
 
-        customer_salutation.add(jRadioButton3);
-        jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton3.setText("Miss");
-        jRadioButton3.setContentAreaFilled(false);
+        customer_salutation.add(jr_cus_miss);
+        jr_cus_miss.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jr_cus_miss.setForeground(new java.awt.Color(255, 255, 255));
+        jr_cus_miss.setText("Miss");
+        jr_cus_miss.setContentAreaFilled(false);
+        jr_cus_miss.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jr_cus_missActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Full Name");
 
-        jTextField1.setMaximumSize(new java.awt.Dimension(300, 30));
-        jTextField1.setMinimumSize(new java.awt.Dimension(300, 30));
-        jTextField1.setPreferredSize(new java.awt.Dimension(300, 30));
+        tf_cus_full_name.setMaximumSize(new java.awt.Dimension(300, 30));
+        tf_cus_full_name.setMinimumSize(new java.awt.Dimension(300, 30));
+        tf_cus_full_name.setPreferredSize(new java.awt.Dimension(300, 30));
+        tf_cus_full_name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_cus_full_nameActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Full Name With Initials");
 
-        jTextField2.setMaximumSize(new java.awt.Dimension(300, 30));
-        jTextField2.setMinimumSize(new java.awt.Dimension(300, 30));
-        jTextField2.setPreferredSize(new java.awt.Dimension(300, 30));
+        tf_cus_fuul_name_initials.setMaximumSize(new java.awt.Dimension(300, 30));
+        tf_cus_fuul_name_initials.setMinimumSize(new java.awt.Dimension(300, 30));
+        tf_cus_fuul_name_initials.setPreferredSize(new java.awt.Dimension(300, 30));
+        tf_cus_fuul_name_initials.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_cus_fuul_name_initialsActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Address");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(2);
-        jScrollPane1.setViewportView(jTextArea1);
+        ta_cus_address.setColumns(20);
+        ta_cus_address.setRows(2);
+        jScrollPane1.setViewportView(ta_cus_address);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Phone Number");
 
-        jTextField3.setMargin(null);
-        jTextField3.setMaximumSize(new java.awt.Dimension(300, 30));
-        jTextField3.setMinimumSize(new java.awt.Dimension(300, 30));
-        jTextField3.setPreferredSize(new java.awt.Dimension(300, 30));
+        tf_cus_phone_number.setMargin(null);
+        tf_cus_phone_number.setMaximumSize(new java.awt.Dimension(300, 30));
+        tf_cus_phone_number.setMinimumSize(new java.awt.Dimension(300, 30));
+        tf_cus_phone_number.setPreferredSize(new java.awt.Dimension(300, 30));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Date Of Birth");
 
-        jDateChooser1.setMaximumSize(new java.awt.Dimension(300, 30));
-        jDateChooser1.setMinimumSize(new java.awt.Dimension(300, 30));
-        jDateChooser1.setPreferredSize(new java.awt.Dimension(300, 30));
+        dc_guren_dob.setMaximumSize(new java.awt.Dimension(300, 30));
+        dc_guren_dob.setMinimumSize(new java.awt.Dimension(300, 30));
+        dc_guren_dob.setPreferredSize(new java.awt.Dimension(300, 30));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("NIC");
 
-        jTextField4.setMaximumSize(new java.awt.Dimension(300, 30));
-        jTextField4.setMinimumSize(new java.awt.Dimension(300, 30));
-        jTextField4.setPreferredSize(new java.awt.Dimension(300, 30));
+        tf_guren_nic.setMaximumSize(new java.awt.Dimension(300, 30));
+        tf_guren_nic.setMinimumSize(new java.awt.Dimension(300, 30));
+        tf_guren_nic.setPreferredSize(new java.awt.Dimension(300, 30));
 
-        maride_status.add(jRadioButton4);
-        jRadioButton4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton4.setText("Maride");
-        jRadioButton4.setContentAreaFilled(false);
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        maride_status.add(jr_cus_maride);
+        jr_cus_maride.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jr_cus_maride.setForeground(new java.awt.Color(255, 255, 255));
+        jr_cus_maride.setSelected(true);
+        jr_cus_maride.setText("Maride");
+        jr_cus_maride.setContentAreaFilled(false);
+        jr_cus_maride.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                jr_cus_marideActionPerformed(evt);
             }
         });
 
-        maride_status.add(jRadioButton5);
-        jRadioButton5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton5.setText("Single");
-        jRadioButton5.setContentAreaFilled(false);
+        maride_status.add(jr_cus_single);
+        jr_cus_single.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jr_cus_single.setForeground(new java.awt.Color(255, 255, 255));
+        jr_cus_single.setText("Single");
+        jr_cus_single.setContentAreaFilled(false);
+        jr_cus_single.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jr_cus_singleActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Any Dependencies");
 
-        customer_dependencys.add(jRadioButton6);
-        jRadioButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton6.setText("Yes");
-        jRadioButton6.setContentAreaFilled(false);
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+        customer_dependencys.add(jr_cus_dependency_yes);
+        jr_cus_dependency_yes.setForeground(new java.awt.Color(255, 255, 255));
+        jr_cus_dependency_yes.setText("Yes");
+        jr_cus_dependency_yes.setContentAreaFilled(false);
+        jr_cus_dependency_yes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
+                jr_cus_dependency_yesActionPerformed(evt);
             }
         });
 
-        customer_dependencys.add(jRadioButton7);
-        jRadioButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton7.setText("No");
-        jRadioButton7.setContentAreaFilled(false);
+        customer_dependencys.add(jr_cus_dependency_no);
+        jr_cus_dependency_no.setForeground(new java.awt.Color(255, 255, 255));
+        jr_cus_dependency_no.setSelected(true);
+        jr_cus_dependency_no.setText("No");
+        jr_cus_dependency_no.setContentAreaFilled(false);
+        jr_cus_dependency_no.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jr_cus_dependency_noActionPerformed(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Occupation Or Position");
 
-        jTextField5.setMaximumSize(new java.awt.Dimension(300, 30));
-        jTextField5.setMinimumSize(new java.awt.Dimension(300, 30));
-        jTextField5.setPreferredSize(new java.awt.Dimension(300, 30));
+        tf_cus_position.setMaximumSize(new java.awt.Dimension(300, 30));
+        tf_cus_position.setMinimumSize(new java.awt.Dimension(300, 30));
+        tf_cus_position.setPreferredSize(new java.awt.Dimension(300, 30));
+        tf_cus_position.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_cus_positionActionPerformed(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(51, 255, 255));
 
@@ -231,13 +291,24 @@ public class customer_registration extends javax.swing.JPanel {
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Salary");
 
-        jTextField6.setMaximumSize(new java.awt.Dimension(300, 30));
-        jTextField6.setMinimumSize(new java.awt.Dimension(300, 30));
-        jTextField6.setPreferredSize(new java.awt.Dimension(300, 30));
+        tf_cus_salery.setMaximumSize(new java.awt.Dimension(300, 30));
+        tf_cus_salery.setMinimumSize(new java.awt.Dimension(300, 30));
+        tf_cus_salery.setPreferredSize(new java.awt.Dimension(300, 30));
+        tf_cus_salery.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_cus_saleryActionPerformed(evt);
+            }
+        });
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Employer Name");
+
+        tf_cus_employer_address.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_cus_employer_addressActionPerformed(evt);
+            }
+        });
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
@@ -247,124 +318,152 @@ public class customer_registration extends javax.swing.JPanel {
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("02.Guarantor Personal Details");
 
-        gerenter_salutation.add(jRadioButton8);
-        jRadioButton8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton8.setText("Mr");
-        jRadioButton8.setContentAreaFilled(false);
+        gerenter_salutation.add(jr_guren_mr);
+        jr_guren_mr.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jr_guren_mr.setForeground(new java.awt.Color(255, 255, 255));
+        jr_guren_mr.setSelected(true);
+        jr_guren_mr.setText("Mr");
+        jr_guren_mr.setContentAreaFilled(false);
+        jr_guren_mr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jr_guren_mrActionPerformed(evt);
+            }
+        });
 
-        gerenter_salutation.add(jRadioButton9);
-        jRadioButton9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton9.setText("Mrs");
-        jRadioButton9.setContentAreaFilled(false);
+        gerenter_salutation.add(jr_guren_mrs);
+        jr_guren_mrs.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jr_guren_mrs.setForeground(new java.awt.Color(255, 255, 255));
+        jr_guren_mrs.setText("Mrs");
+        jr_guren_mrs.setContentAreaFilled(false);
+        jr_guren_mrs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jr_guren_mrsActionPerformed(evt);
+            }
+        });
 
-        gerenter_salutation.add(jRadioButton10);
-        jRadioButton10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton10.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton10.setText("Miss");
-        jRadioButton10.setContentAreaFilled(false);
+        gerenter_salutation.add(jr_guren_miss);
+        jr_guren_miss.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jr_guren_miss.setForeground(new java.awt.Color(255, 255, 255));
+        jr_guren_miss.setText("Miss");
+        jr_guren_miss.setContentAreaFilled(false);
+        jr_guren_miss.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jr_guren_missActionPerformed(evt);
+            }
+        });
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Full Name");
 
-        jTextField9.setMaximumSize(new java.awt.Dimension(300, 30));
-        jTextField9.setMinimumSize(new java.awt.Dimension(300, 30));
-        jTextField9.setPreferredSize(new java.awt.Dimension(300, 30));
+        tf_guren_full_name.setMaximumSize(new java.awt.Dimension(300, 30));
+        tf_guren_full_name.setMinimumSize(new java.awt.Dimension(300, 30));
+        tf_guren_full_name.setPreferredSize(new java.awt.Dimension(300, 30));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Full Name With Initials");
 
-        jTextField10.setMaximumSize(new java.awt.Dimension(300, 30));
-        jTextField10.setMinimumSize(new java.awt.Dimension(300, 30));
-        jTextField10.setPreferredSize(new java.awt.Dimension(300, 30));
+        tf_guren_fuul_name_initials.setMaximumSize(new java.awt.Dimension(300, 30));
+        tf_guren_fuul_name_initials.setMinimumSize(new java.awt.Dimension(300, 30));
+        tf_guren_fuul_name_initials.setPreferredSize(new java.awt.Dimension(300, 30));
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Address");
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(2);
-        jScrollPane2.setViewportView(jTextArea2);
+        ta_guren_address.setColumns(20);
+        ta_guren_address.setRows(2);
+        jScrollPane2.setViewportView(ta_guren_address);
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Phone Number");
 
-        jTextField11.setMargin(null);
-        jTextField11.setMaximumSize(new java.awt.Dimension(300, 30));
-        jTextField11.setMinimumSize(new java.awt.Dimension(300, 30));
-        jTextField11.setPreferredSize(new java.awt.Dimension(300, 30));
+        tf_guren_phone_number.setMargin(null);
+        tf_guren_phone_number.setMaximumSize(new java.awt.Dimension(300, 30));
+        tf_guren_phone_number.setMinimumSize(new java.awt.Dimension(300, 30));
+        tf_guren_phone_number.setPreferredSize(new java.awt.Dimension(300, 30));
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Date Of Birth");
 
-        jDateChooser2.setMaximumSize(new java.awt.Dimension(300, 30));
-        jDateChooser2.setMinimumSize(new java.awt.Dimension(300, 30));
-        jDateChooser2.setPreferredSize(new java.awt.Dimension(300, 30));
+        dc_cus_dob.setMaximumSize(new java.awt.Dimension(300, 30));
+        dc_cus_dob.setMinimumSize(new java.awt.Dimension(300, 30));
+        dc_cus_dob.setPreferredSize(new java.awt.Dimension(300, 30));
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("NIC");
 
-        jTextField12.setMaximumSize(new java.awt.Dimension(300, 30));
-        jTextField12.setMinimumSize(new java.awt.Dimension(300, 30));
-        jTextField12.setPreferredSize(new java.awt.Dimension(300, 30));
+        tf_cus_nic.setMaximumSize(new java.awt.Dimension(300, 30));
+        tf_cus_nic.setMinimumSize(new java.awt.Dimension(300, 30));
+        tf_cus_nic.setPreferredSize(new java.awt.Dimension(300, 30));
 
-        gerenter_maride_state.add(jRadioButton11);
-        jRadioButton11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jRadioButton11.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton11.setText("Maride");
-        jRadioButton11.setContentAreaFilled(false);
-        jRadioButton11.addActionListener(new java.awt.event.ActionListener() {
+        gerenter_maride_state.add(jr_guren_maride);
+        jr_guren_maride.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jr_guren_maride.setForeground(new java.awt.Color(255, 255, 255));
+        jr_guren_maride.setSelected(true);
+        jr_guren_maride.setText("Maride");
+        jr_guren_maride.setContentAreaFilled(false);
+        jr_guren_maride.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton11ActionPerformed(evt);
+                jr_guren_marideActionPerformed(evt);
             }
         });
 
-        gerenter_maride_state.add(jRadioButton12);
-        jRadioButton12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jRadioButton12.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton12.setText("Single");
-        jRadioButton12.setContentAreaFilled(false);
+        gerenter_maride_state.add(jr_guren_single);
+        jr_guren_single.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jr_guren_single.setForeground(new java.awt.Color(255, 255, 255));
+        jr_guren_single.setText("Single");
+        jr_guren_single.setContentAreaFilled(false);
+        jr_guren_single.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jr_guren_singleActionPerformed(evt);
+            }
+        });
 
         jLabel20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("Any Dependencies");
 
-        gerenter_dependencys.add(jRadioButton13);
-        jRadioButton13.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton13.setText("Yes");
-        jRadioButton13.setContentAreaFilled(false);
-        jRadioButton13.addActionListener(new java.awt.event.ActionListener() {
+        gerenter_dependencys.add(jr_guren_dependency_yes);
+        jr_guren_dependency_yes.setForeground(new java.awt.Color(255, 255, 255));
+        jr_guren_dependency_yes.setSelected(true);
+        jr_guren_dependency_yes.setText("Yes");
+        jr_guren_dependency_yes.setContentAreaFilled(false);
+        jr_guren_dependency_yes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton13ActionPerformed(evt);
+                jr_guren_dependency_yesActionPerformed(evt);
             }
         });
 
-        gerenter_dependencys.add(jRadioButton14);
-        jRadioButton14.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton14.setText("No");
-        jRadioButton14.setContentAreaFilled(false);
+        gerenter_dependencys.add(jr_guren_dependency_no);
+        jr_guren_dependency_no.setForeground(new java.awt.Color(255, 255, 255));
+        jr_guren_dependency_no.setText("No");
+        jr_guren_dependency_no.setContentAreaFilled(false);
+        jr_guren_dependency_no.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jr_guren_dependency_noActionPerformed(evt);
+            }
+        });
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Occupation Or Position");
 
-        jTextField13.setMaximumSize(new java.awt.Dimension(300, 30));
-        jTextField13.setMinimumSize(new java.awt.Dimension(300, 30));
-        jTextField13.setPreferredSize(new java.awt.Dimension(300, 30));
+        tf_guren_position.setMaximumSize(new java.awt.Dimension(300, 30));
+        tf_guren_position.setMinimumSize(new java.awt.Dimension(300, 30));
+        tf_guren_position.setPreferredSize(new java.awt.Dimension(300, 30));
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Salary");
 
-        jTextField14.setMaximumSize(new java.awt.Dimension(300, 30));
-        jTextField14.setMinimumSize(new java.awt.Dimension(300, 30));
-        jTextField14.setPreferredSize(new java.awt.Dimension(300, 30));
+        tf_guren_salery.setMaximumSize(new java.awt.Dimension(300, 30));
+        tf_guren_salery.setMinimumSize(new java.awt.Dimension(300, 30));
+        tf_guren_salery.setPreferredSize(new java.awt.Dimension(300, 30));
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
@@ -400,6 +499,33 @@ public class customer_registration extends javax.swing.JPanel {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
+        page_change.add(jr_pg3);
+        jr_pg3.setToolTipText("3");
+        jr_pg3.setContentAreaFilled(false);
+        jr_pg3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jr_pg3ActionPerformed(evt);
+            }
+        });
+
+        page_change.add(jr_pg2);
+        jr_pg2.setToolTipText("2");
+        jr_pg2.setContentAreaFilled(false);
+        jr_pg2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jr_pg2ActionPerformed(evt);
+            }
+        });
+
+        page_change.add(jr_pg1);
+        jr_pg1.setToolTipText("1");
+        jr_pg1.setContentAreaFilled(false);
+        jr_pg1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jr_pg1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -408,42 +534,42 @@ public class customer_registration extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jRadioButton6)
+                        .addComponent(jr_cus_dependency_yes)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton7))
+                        .addComponent(jr_cus_dependency_no))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jRadioButton4)
+                        .addComponent(jr_cus_maride)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton5))
+                        .addComponent(jr_cus_single))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jRadioButton1)
+                        .addComponent(jr_cus_mr)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton2)
+                        .addComponent(jr_cus_mrs)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton3))
+                        .addComponent(jr_cus_miss))
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tf_cus_full_name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tf_cus_fuul_name_initials, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel4)
                     .addComponent(jScrollPane1)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tf_cus_phone_number, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel6)
                     .addComponent(jLabel7)
                     .addComponent(jLabel8)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(tf_cus_position, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(dc_cus_dob, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tf_cus_nic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
-                    .addComponent(jTextField7)
-                    .addComponent(jTextField8)
+                    .addComponent(tf_cus_salery, javax.swing.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
+                    .addComponent(tf_cus_employer_address)
+                    .addComponent(tf_cus_employer_name)
                     .addComponent(jLabel11)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
@@ -451,20 +577,20 @@ public class customer_registration extends javax.swing.JPanel {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tf_guren_position, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tf_guren_phone_number, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tf_guren_full_name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tf_guren_fuul_name_initials, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane2)
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dc_guren_dob, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tf_guren_nic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jRadioButton8)
+                        .addComponent(jr_guren_mr)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton9)
+                        .addComponent(jr_guren_mrs)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton10))
+                        .addComponent(jr_guren_miss))
                     .addComponent(jLabel14)
                     .addComponent(jLabel15)
                     .addComponent(jLabel16)
@@ -472,36 +598,63 @@ public class customer_registration extends javax.swing.JPanel {
                     .addComponent(jLabel18)
                     .addComponent(jLabel19)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jRadioButton13)
+                        .addComponent(jr_guren_dependency_yes)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton14))
+                        .addComponent(jr_guren_dependency_no))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jRadioButton11)
+                        .addComponent(jr_guren_maride)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton12))
+                        .addComponent(jr_guren_single))
                     .addComponent(jLabel20)
                     .addComponent(jLabel21))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel23)
-                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField16)
-                        .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel22))
-                .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel23)
+                                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tf_guren_salery, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(tf_guren_employer_name)
+                                .addComponent(tf_guren_employer_address, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel22))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jr_pg1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jr_pg2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jr_pg3)
+                        .addGap(65, 65, 65))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel22)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_guren_salery, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel23)
+                        .addGap(18, 18, 18)
+                        .addComponent(tf_guren_employer_name, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(11, 11, 11)
+                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_guren_employer_address, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jr_pg3)
+                            .addComponent(jr_pg2)
+                            .addComponent(jr_pg1)))
+                    .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(15, 15, 15)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -510,17 +663,17 @@ public class customer_registration extends javax.swing.JPanel {
                                         .addComponent(jLabel1)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jRadioButton1)
-                                            .addComponent(jRadioButton2)
-                                            .addComponent(jRadioButton3))
+                                            .addComponent(jr_cus_mr)
+                                            .addComponent(jr_cus_mrs)
+                                            .addComponent(jr_cus_miss))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel2)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(tf_cus_full_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel3)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(tf_cus_fuul_name_initials, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel4)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -528,44 +681,44 @@ public class customer_registration extends javax.swing.JPanel {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel5)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(tf_cus_phone_number, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel6)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(dc_cus_dob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel7)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(tf_cus_nic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(7, 7, 7)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jRadioButton4)
-                                            .addComponent(jRadioButton5))
+                                            .addComponent(jr_cus_maride)
+                                            .addComponent(jr_cus_single))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel8)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jRadioButton6)
-                                            .addComponent(jRadioButton7))
+                                            .addComponent(jr_cus_dependency_yes)
+                                            .addComponent(jr_cus_dependency_no))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel9)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(tf_cus_position, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel13)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jRadioButton8)
-                                            .addComponent(jRadioButton9)
-                                            .addComponent(jRadioButton10))
+                                            .addComponent(jr_guren_mr)
+                                            .addComponent(jr_guren_mrs)
+                                            .addComponent(jr_guren_miss))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel14)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(tf_guren_full_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel15)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(tf_guren_fuul_name_initials, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel16))
                                     .addGroup(layout.createSequentialGroup()
@@ -574,91 +727,407 @@ public class customer_registration extends javax.swing.JPanel {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel17)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(tf_guren_phone_number, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel18)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(dc_guren_dob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel19)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(tf_guren_nic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jRadioButton11)
-                                            .addComponent(jRadioButton12))
+                                            .addComponent(jr_guren_maride)
+                                            .addComponent(jr_guren_single))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel20)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jRadioButton13)
-                                            .addComponent(jRadioButton14))
+                                            .addComponent(jr_guren_dependency_yes)
+                                            .addComponent(jr_guren_dependency_no))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel21)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(tf_guren_position, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(0, 13, Short.MAX_VALUE))
                             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(52, 52, 52)
                         .addComponent(jLabel10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tf_cus_salery, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel11)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tf_cus_employer_name, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(11, 11, 11)
                         .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tf_cus_employer_address, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jLabel22)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel23)
-                .addGap(18, 18, 18)
-                .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
-                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    private void jr_cus_marideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jr_cus_marideActionPerformed
 
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
+        cus_maritialStatus="Maride";
+        
+    }//GEN-LAST:event_jr_cus_marideActionPerformed
 
-    private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton11ActionPerformed
+    private void jr_cus_dependency_yesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jr_cus_dependency_yesActionPerformed
 
-    private void jRadioButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton13ActionPerformed
+        cus_anyDependency="yes";
+        
+    }//GEN-LAST:event_jr_cus_dependency_yesActionPerformed
+
+    private void jr_guren_marideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jr_guren_marideActionPerformed
+
+        guren_maritialStatus="Maride";
+        
+    }//GEN-LAST:event_jr_guren_marideActionPerformed
+
+    private void jr_guren_dependency_yesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jr_guren_dependency_yesActionPerformed
+
+        guren_anyDependency="yes";
+        
+    }//GEN-LAST:event_jr_guren_dependency_yesActionPerformed
+
+    private void jr_pg1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jr_pg1ActionPerformed
+
+//          boolean flag = false;
+//        JTextField temTf = null;
+//        for (JTextField tf : getTf()) {
+//            if (tf.getText().toString().trim().equals("")) {
+//                flag = true;
+//                temTf = tf;
+//                break;
+//
+//            }
+//        }
+//        if (flag) {
+//
+//            temTf.grabFocus();
+//
+//        }else{
+             //intialize valaues
+     cus_fullName=tf_cus_full_name.getText();
+     cus_fullNameWithInitials=tf_cus_fuul_name_initials.getText();
+     cus_address=ta_cus_address.getText();
+     cus_dob=sdf.format(dc_cus_dob.getDate());
+     cus_employerAddress=tf_cus_employer_address.getText();
+     cus_employerName=tf_cus_employer_name.getText();
+     cus_nic=tf_cus_nic.getText();
+     cus_phoneNumber=tf_cus_phone_number.getText();
+     cus_position=tf_cus_position.getText();
+     cus_salary=tf_cus_salery.getText();
+     
+     //gurenter intialize valaues
+     guren_address=ta_guren_address.getText();
+     guren_dob=sdf.format(dc_guren_dob.getDate());
+     guren_employerAddress=tf_guren_employer_address.getText();
+     guren_employerName=tf_guren_employer_name.getText();
+     guren_fullName=tf_guren_full_name.getText();
+     guren_fullNameWithInitials=tf_cus_fuul_name_initials.getText();
+     guren_nic=tf_guren_nic.getText();
+     guren_phoneNumber=tf_guren_phone_number.getText();
+     guren_position=tf_guren_position.getText();
+     guren_salary=tf_guren_salery.getText();
+       
+//        }
+        
+        
+        
+       
+        
+          customer_registration cus_registration=new customer_registration();
+
+    main.removeAll();
+        GroupLayout layout = new GroupLayout(main);
+        main.setLayout(layout);
+
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(cus_registration, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+        layout.setVerticalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(cus_registration, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+       
+
+        System.gc();
+        
+    }//GEN-LAST:event_jr_pg1ActionPerformed
+
+    private void jr_pg2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jr_pg2ActionPerformed
+  
+//           boolean flag = false;
+//        JTextField temTf = null;
+//        for (JTextField tf : getTf()) {
+//            if (tf.getText().toString().trim().equals("")) {
+//                flag = true;
+//                temTf = tf;
+//                break;
+//
+//            }
+//        }
+//        if (flag) {
+//
+//            temTf.grabFocus();
+//
+//        }else{
+             //intialize valaues
+     cus_fullName=tf_cus_full_name.getText();
+     cus_fullNameWithInitials=tf_cus_fuul_name_initials.getText();
+     cus_address=ta_cus_address.getText();
+     cus_dob=sdf.format(dc_cus_dob.getDate());
+     cus_employerAddress=tf_cus_employer_address.getText();
+     cus_employerName=tf_cus_employer_name.getText();
+     cus_nic=tf_cus_nic.getText();
+     cus_phoneNumber=tf_cus_phone_number.getText();
+     cus_position=tf_cus_position.getText();
+     cus_salary=tf_cus_salery.getText();
+     
+     //gurenter intialize valaues
+     guren_address=ta_guren_address.getText();
+     guren_dob=sdf.format(dc_guren_dob.getDate());
+     guren_employerAddress=tf_guren_employer_address.getText();
+     guren_employerName=tf_guren_employer_name.getText();
+     guren_fullName=tf_guren_full_name.getText();
+     guren_fullNameWithInitials=tf_cus_fuul_name_initials.getText();
+     guren_nic=tf_guren_nic.getText();
+     guren_phoneNumber=tf_guren_phone_number.getText();
+     guren_position=tf_guren_position.getText();
+     guren_salary=tf_guren_salery.getText();
+       
+//        }
+     
+      System.out.println(cus_fullName+" "+guren_employerAddress);
+     
+//        customer_registration2 cus_registration2=new customer_registration2();
+//            if (cus_registration2 == null) {
+//                 main.removeAll();
+//                 System.out.println("if 1");
+//                revalidate();
+//                System.out.println("if 2");
+//                cus_registration2 = new customer_registration2();
+//                System.out.println("if 3");
+//                cus_registration2.setVisible(true);
+//                System.out.println("if 4");
+//                main.add(cus_registration2);
+//                System.out.println("if 5");
+//                revalidate();
+//                System.out.println("if 6");
+//                updateUI();
+//                System.out.println("if 7");
+//            } else {
+//                main.removeAll();
+//                System.out.println("else 1");
+//                revalidate();
+//                System.out.println("else 2");
+//                cus_registration2.setVisible(true);
+//                System.out.println("else 3");
+//               main.add(cus_registration2);
+//               System.out.println("else 4");
+//                revalidate();
+//                System.out.println("else 5");
+//                updateUI();
+//                System.out.println("else 6");
+//            }
+        
+        
+//        
+          customer_registration2 cus_registration2=new customer_registration2();
+
+    main.removeAll();
+        GroupLayout layout = new GroupLayout(main);
+        main.setLayout(layout);
+
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(cus_registration2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+        layout.setVerticalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(cus_registration2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+       
+
+        System.gc();
+        
+    }//GEN-LAST:event_jr_pg2ActionPerformed
+
+    private void jr_pg3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jr_pg3ActionPerformed
+
+          
+//           boolean flag = false;
+//        JTextField temTf = null;
+//        for (JTextField tf : getTf()) {
+//            System.out.println("ela");
+//            if (tf.getText().toString().trim().equals("")) {
+//                System.out.println("ela123");
+//                flag = true;
+//                System.out.println(flag);
+//                temTf = tf;
+//                break;
+//
+//            }
+//        }
+//        if (flag) {
+//
+//            temTf.grabFocus();
+//
+//        }else{
+//            System.out.println("awaaa");
+             //intialize valaues
+     cus_fullName=tf_cus_full_name.getText();
+     cus_fullNameWithInitials=tf_cus_fuul_name_initials.getText();
+     cus_address=ta_cus_address.getText();
+     cus_dob=sdf.format(dc_cus_dob.getDate());
+     cus_employerAddress=tf_cus_employer_address.getText();
+     cus_employerName=tf_cus_employer_name.getText();
+     cus_nic=tf_cus_nic.getText();
+     cus_phoneNumber=tf_cus_phone_number.getText();
+     cus_position=tf_cus_position.getText();
+     cus_salary=tf_cus_salery.getText();
+     
+     //gurenter intialize valaues
+     guren_address=ta_guren_address.getText();
+     guren_dob=sdf.format(dc_guren_dob.getDate());
+     guren_employerAddress=tf_guren_employer_address.getText();
+     guren_employerName=tf_guren_employer_name.getText();
+     guren_fullName=tf_guren_full_name.getText();
+     guren_fullNameWithInitials=tf_cus_fuul_name_initials.getText();
+     guren_nic=tf_guren_nic.getText();
+     guren_phoneNumber=tf_guren_phone_number.getText();
+     guren_position=tf_guren_position.getText();
+     guren_salary=tf_guren_salery.getText();
+       
+//        }
+        System.out.println(cus_fullName+" "+guren_employerAddress);
+        
+          customer_registration3 cus_registration3=new customer_registration3();
+
+    main.removeAll();
+        GroupLayout layout = new GroupLayout(main);
+       main.setLayout(layout);
+
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(cus_registration3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+        layout.setVerticalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(cus_registration3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+       
+
+        System.gc();
+        
+    }//GEN-LAST:event_jr_pg3ActionPerformed
+
+    private void jr_cus_mrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jr_cus_mrActionPerformed
+
+       cus_salutation="Mr"; 
+        
+    }//GEN-LAST:event_jr_cus_mrActionPerformed
+
+    private void jr_cus_mrsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jr_cus_mrsActionPerformed
+
+        cus_salutation="Mrs"; 
+        
+    }//GEN-LAST:event_jr_cus_mrsActionPerformed
+
+    private void jr_cus_missActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jr_cus_missActionPerformed
+
+        cus_salutation="Miss"; 
+        
+    }//GEN-LAST:event_jr_cus_missActionPerformed
+
+    private void jr_cus_singleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jr_cus_singleActionPerformed
+
+        cus_maritialStatus="Single";
+        
+    }//GEN-LAST:event_jr_cus_singleActionPerformed
+
+    private void jr_cus_dependency_noActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jr_cus_dependency_noActionPerformed
+
+        cus_anyDependency="No";
+        
+    }//GEN-LAST:event_jr_cus_dependency_noActionPerformed
+
+    private void jr_guren_dependency_noActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jr_guren_dependency_noActionPerformed
+
+        guren_anyDependency="No";
+        
+    }//GEN-LAST:event_jr_guren_dependency_noActionPerformed
+
+    private void jr_guren_mrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jr_guren_mrActionPerformed
+
+        guren_salutation="Mr";
+        
+    }//GEN-LAST:event_jr_guren_mrActionPerformed
+
+    private void jr_guren_mrsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jr_guren_mrsActionPerformed
+
+         guren_salutation="Mrs";
+        
+    }//GEN-LAST:event_jr_guren_mrsActionPerformed
+
+    private void jr_guren_missActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jr_guren_missActionPerformed
+
+         guren_salutation="Miss";
+        
+    }//GEN-LAST:event_jr_guren_missActionPerformed
+
+    private void jr_guren_singleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jr_guren_singleActionPerformed
+
+        guren_maritialStatus="Single";
+        
+    }//GEN-LAST:event_jr_guren_singleActionPerformed
+
+    private void tf_cus_full_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_cus_full_nameActionPerformed
+
+        if (!(tf_cus_full_name.getText().isEmpty())) {
+            tf_cus_fuul_name_initials.grabFocus();
+        }
+        
+    }//GEN-LAST:event_tf_cus_full_nameActionPerformed
+
+    private void tf_cus_fuul_name_initialsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_cus_fuul_name_initialsActionPerformed
+
+        if (!(tf_cus_fuul_name_initials.getText().isEmpty())) {
+            ta_cus_address.grabFocus();
+        }
+        
+    }//GEN-LAST:event_tf_cus_fuul_name_initialsActionPerformed
+
+    private void tf_cus_positionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_cus_positionActionPerformed
+
+        if (!(tf_cus_position.getText().isEmpty())) {
+            tf_cus_salery.grabFocus();
+        }
+        
+    }//GEN-LAST:event_tf_cus_positionActionPerformed
+
+    private void tf_cus_saleryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_cus_saleryActionPerformed
+
+        if (!(tf_cus_salery.getText().isEmpty())) {
+            tf_cus_employer_name.grabFocus();
+        }
+        
+    }//GEN-LAST:event_tf_cus_saleryActionPerformed
+
+    private void tf_cus_employer_addressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_cus_employer_addressActionPerformed
+
+        if (!(tf_cus_employer_name.getText().isEmpty())) {
+            tf_cus_employer_address.grabFocus();
+        }
+        
+    }//GEN-LAST:event_tf_cus_employer_addressActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup customer_dependencys;
     private javax.swing.ButtonGroup customer_salutation;
+    private com.toedter.calendar.JDateChooser dc_cus_dob;
+    private com.toedter.calendar.JDateChooser dc_guren_dob;
     private javax.swing.ButtonGroup gerenter_dependencys;
     private javax.swing.ButtonGroup gerenter_maride_state;
     private javax.swing.ButtonGroup gerenter_salutation;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -686,40 +1155,51 @@ public class customer_registration extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton11;
-    private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton13;
-    private javax.swing.JRadioButton jRadioButton14;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JRadioButton jr_cus_dependency_no;
+    private javax.swing.JRadioButton jr_cus_dependency_yes;
+    private javax.swing.JRadioButton jr_cus_maride;
+    private javax.swing.JRadioButton jr_cus_miss;
+    private javax.swing.JRadioButton jr_cus_mr;
+    private javax.swing.JRadioButton jr_cus_mrs;
+    private javax.swing.JRadioButton jr_cus_single;
+    private javax.swing.JRadioButton jr_guren_dependency_no;
+    private javax.swing.JRadioButton jr_guren_dependency_yes;
+    private javax.swing.JRadioButton jr_guren_maride;
+    private javax.swing.JRadioButton jr_guren_miss;
+    private javax.swing.JRadioButton jr_guren_mr;
+    private javax.swing.JRadioButton jr_guren_mrs;
+    private javax.swing.JRadioButton jr_guren_single;
+    private javax.swing.JRadioButton jr_pg1;
+    private javax.swing.JRadioButton jr_pg2;
+    private javax.swing.JRadioButton jr_pg3;
     private javax.swing.ButtonGroup maride_status;
+    private javax.swing.ButtonGroup page_change;
+    private javax.swing.JTextArea ta_cus_address;
+    private javax.swing.JTextArea ta_guren_address;
+    private javax.swing.JTextField tf_cus_employer_address;
+    private javax.swing.JTextField tf_cus_employer_name;
+    private javax.swing.JTextField tf_cus_full_name;
+    private javax.swing.JTextField tf_cus_fuul_name_initials;
+    private javax.swing.JTextField tf_cus_nic;
+    private javax.swing.JTextField tf_cus_phone_number;
+    private javax.swing.JTextField tf_cus_position;
+    private javax.swing.JTextField tf_cus_salery;
+    private javax.swing.JTextField tf_guren_employer_address;
+    private javax.swing.JTextField tf_guren_employer_name;
+    private javax.swing.JTextField tf_guren_full_name;
+    private javax.swing.JTextField tf_guren_fuul_name_initials;
+    private javax.swing.JTextField tf_guren_nic;
+    private javax.swing.JTextField tf_guren_phone_number;
+    private javax.swing.JTextField tf_guren_position;
+    private javax.swing.JTextField tf_guren_salery;
     // End of variables declaration//GEN-END:variables
+
+    private JTextField[] getTf() {
+        JTextField arr[] = {tf_cus_employer_address,tf_cus_employer_name,tf_cus_full_name,tf_cus_fuul_name_initials,
+            tf_cus_nic,tf_cus_phone_number,tf_cus_position,tf_cus_salery,tf_guren_employer_address,tf_guren_employer_name,
+        tf_guren_full_name,tf_guren_fuul_name_initials,tf_guren_nic,tf_guren_phone_number,tf_guren_position,tf_guren_salery};
+        return arr;
+    }
 }
