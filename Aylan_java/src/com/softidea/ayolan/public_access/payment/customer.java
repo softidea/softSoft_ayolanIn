@@ -22,8 +22,9 @@ public class customer extends javax.swing.JFrame {
         initComponents();
         this.getContentPane().setBackground(Color.decode("#00BFA5"));
     }
+
     public void load_username(String string) {
-        string=User_home.username;
+        string = User_home.username;
     }
 
     /**

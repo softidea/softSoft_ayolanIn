@@ -23,10 +23,10 @@ public class payment extends javax.swing.JFrame {
         this.getContentPane().setBackground(Color.decode("#00BFA5"));
 
     }
-    
+
     public void load_username(String string) {
-        User_home.username=string;
-        
+        User_home.username = string;
+
     }
 
     /**
@@ -285,9 +285,9 @@ public class payment extends javax.swing.JFrame {
 
     private void jLabel11MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseReleased
 
-        User_home h=new User_home();
+        User_home h = new User_home();
         h.setVisible(true);
-        
+
         this.dispose();
 
     }//GEN-LAST:event_jLabel11MouseReleased

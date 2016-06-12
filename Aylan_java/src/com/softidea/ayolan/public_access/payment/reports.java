@@ -22,8 +22,9 @@ public class reports extends javax.swing.JFrame {
         initComponents();
         this.getContentPane().setBackground(Color.decode("#00BFA5"));
     }
+
     public void load_username(String string) {
-        string=User_home.username;
+        string = User_home.username;
     }
 
     /**
@@ -81,10 +82,10 @@ public class reports extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel11MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseReleased
-    
+
         new User_home().setVisible(true);
         this.dispose();
-        
+
     }//GEN-LAST:event_jLabel11MouseReleased
 
     /**

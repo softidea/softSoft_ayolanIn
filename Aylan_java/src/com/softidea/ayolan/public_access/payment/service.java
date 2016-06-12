@@ -24,7 +24,7 @@ public class service extends javax.swing.JFrame {
     }
 
     public String load_username(String string) {
-        string=User_home.username;
+        string = User_home.username;
         return string;
     }
 
